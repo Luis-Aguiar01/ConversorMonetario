@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     private fun convertToReal() {
         val valueInDollar = getInputValue()
         val real = valueInDollar / DOLLAR_VALUE
-        conversionResultText.text = "RS$ ${decimalFormatter.format(real)}"
+        conversionResultText.text = "R$ ${decimalFormatter.format(real)}"
     }
 
     private fun setButtonListener() {
