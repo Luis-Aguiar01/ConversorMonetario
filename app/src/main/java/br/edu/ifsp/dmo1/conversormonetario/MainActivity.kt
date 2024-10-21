@@ -11,7 +11,7 @@ import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity(), OnClickListener {
 
-    private val DOLLAR_VALUE = 5.50
+    private val dollarValue = 5.50
     private val decimalFormatter = DecimalFormat("#.##")
 
     private lateinit var inputValueEditText: EditText
@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     private fun convertToDollar() {
         val valueInReal = getInputValue()
-        val dollar = valueInReal * DOLLAR_VALUE
+        val dollar = valueInReal * dollarValue
         conversionResultText.text = "US$ ${decimalFormatter.format(dollar)}"
     }
 
     private fun convertToReal() {
         val valueInDollar = getInputValue()
-        val real = valueInDollar / DOLLAR_VALUE
+        val real = valueInDollar / dollarValue
         conversionResultText.text = "R$ ${decimalFormatter.format(real)}"
     }
 
