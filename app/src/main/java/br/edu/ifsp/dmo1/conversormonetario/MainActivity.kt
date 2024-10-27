@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         val valueInReal = getInputValue()
         val dollar = valueInReal / dollarValue
         conversionResultText.text = "US$ ${decimalFormatter.format(dollar)}"
-        textResult.text = "Valor da conversão para dolar:"
+        textResult.text = "Valor da conversão para dólar:"
     }
 
     private fun convertToReal() {

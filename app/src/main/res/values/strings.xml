@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Conversor DMO</string>
-    <string name="button_to_dollar">Converter para dolar</string>
+    <string name="button_to_dollar">Converter para dólar</string>
     <string name="button_to_real">Converter para reais</string>
     <string name="label_input">Digite o valor abaixo:</string>
-    <string name="label_result">Valor Convertido:</string>
 </resources>
