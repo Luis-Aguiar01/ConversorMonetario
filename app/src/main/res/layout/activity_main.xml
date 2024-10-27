@@ -70,6 +70,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -77,7 +78,7 @@
         android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:textSize="23sp"
-        android:text="@string/label_result" />
+        />
 
     <TextView
         android:id="@+id/conversion_result"

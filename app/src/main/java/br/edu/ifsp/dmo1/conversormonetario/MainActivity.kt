@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var buttonConvertToDollar: Button
     private lateinit var buttonConvertToReal: Button
     private lateinit var conversionResultText: TextView
+    private lateinit var textResult: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,14 +43,16 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     private fun convertToDollar() {
         val valueInReal = getInputValue()
-        val dollar = valueInReal * dollarValue
+        val dollar = valueInReal / dollarValue
         conversionResultText.text = "US$ ${decimalFormatter.format(dollar)}"
+        textResult.text = "Valor da conversão para dolar:"
     }
 
     private fun convertToReal() {
         val valueInDollar = getInputValue()
-        val real = valueInDollar / dollarValue
+        val real = valueInDollar * dollarValue
         conversionResultText.text = "R$ ${decimalFormatter.format(real)}"
+        textResult.text = "Valor da conversão para reais:"
     }
 
     private fun setButtonListener() {
@@ -62,5 +65,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         buttonConvertToDollar = findViewById(R.id.convert_to_dollar_button)
         buttonConvertToReal = findViewById(R.id.convert_to_real_button)
         conversionResultText = findViewById(R.id.conversion_result)
+        textResult = findViewById(R.id.text_result)
     }
 }
